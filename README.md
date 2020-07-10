@@ -1,5 +1,7 @@
-# bomberthon
+# BOMBERTHON
 Best Bombing Tool with WhatsApp, Instagram, SMS bomber
+
+
 <a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture1.PNG?raw=true" alt="bomberthon"/></a>
 
 ## Before Running `bomberthon.py`
