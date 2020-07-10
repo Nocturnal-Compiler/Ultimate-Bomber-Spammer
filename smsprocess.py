@@ -105,6 +105,7 @@ f'''    |-$ How many times (1-200) ? > {repcount}''')
             pass
 
         browser.find_element_by_name('submit').click()
+        time.sleep(5)
         browser.get('https://mytoolstown.com/smsbomber/#bestsmsbomber')
 
         try:
