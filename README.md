@@ -23,9 +23,9 @@ Ensure that you are on Windows Oparating System and you have Chrome Broswer on y
 python bomberthon.py
 ```
 
-## DEMO
 
-<iframe width="100%" height="100%" src="https://drive.google.com/file/d/12EtfewS-53Ac2UDvdytaX6levfd50XiI/preview"></iframe>
+
+
 
 
 
