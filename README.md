@@ -6,7 +6,7 @@ Best Bombing Tool with WhatsApp, Instagram, SMS bomber
 
 ## Before Running `bomberthon.py`
 
-*Ensure that you are on Windows Oparating System and you have Chrome Broswer on your PC.
+* Ensure that you are on Windows Oparating System and you have Chrome Broswer on your PC.
 
 ## Requirements
  
@@ -25,7 +25,7 @@ python bomberthon.py
 
 ## Demo
 
-video link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_link (sign in not required)
+Video Link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_link (sign in not required)
 
 
 ## Screenshots
