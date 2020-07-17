@@ -23,10 +23,9 @@ Ensure that you are on Windows Oparating System and you have Chrome Broswer on y
 python bomberthon.py
 ```
 
+## Demo
 
-
-
-
+video link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_link (sign in not requaired)
 
 
 ## Screenshots
