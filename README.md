@@ -1,9 +1,9 @@
 # BOMBERTHON
-[![Licence](https://img.shields.io/github/license/b31ngd3v/bomberthon)]
+![Licence](https://img.shields.io/github/license/b31ngd3v/bomberthon)
 
 ```
     All Bombs away Sir
-         \
+          \
            \           Goodbye Dullsville!
                 __|__  /
        .'(\      .-.     /)'.
