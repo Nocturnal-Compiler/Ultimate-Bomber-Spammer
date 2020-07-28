@@ -1,5 +1,9 @@
 # BOMBERTHON
 ![Licence](https://img.shields.io/github/license/b31ngd3v/bomberthon)
+![version](https://img.shields.io/static/v1?label=version&message=v1.1-stable&color=brightgreen)
+![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=orange)
+![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=orange)
+
 
 ```
     All Bombs away Sir
