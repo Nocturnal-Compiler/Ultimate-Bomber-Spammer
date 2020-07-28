@@ -11,3 +11,4 @@ def checkinternet():
         print("    |-$ It seems that you are not connected to Internet.")
         print('    |-$ bomberthon will stop now...')
         exit()
+    
