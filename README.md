@@ -1,6 +1,6 @@
 # BOMBERTHON
 
-<a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture1.PNG?raw=true" alt="bomberthon"/></a>
+<a><img src="https://raw.githubusercontent.com/b31ngD3v/bomberthon/master/screenshots/Screenshot%20at%202020-07-29%2001-38-23.png" alt="bomberthon"/></a>
 
 ### Features
 
@@ -53,5 +53,5 @@ Video Link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_
 
 ## Screenshots
 
+<a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture.PNG?raw=true" alt="bomberthon"/></a>
 <a><img src="https://raw.githubusercontent.com/b31ngD3v/bomberthon/master/screenshots/Screenshot%20at%202020-07-29%2001-38-23.png" alt="bomberthon"/></a>
-<a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture1.PNG?raw=true" alt="bomberthon"/></a>
