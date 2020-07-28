@@ -1,6 +1,27 @@
 # BOMBERTHON
+[(https://img.shields.io/github/license/b31ngd3v/bomberthon)]
 
-<a><img src="https://raw.githubusercontent.com/b31ngD3v/bomberthon/master/screenshots/Screenshot%20at%202020-07-29%2001-38-23.png" alt="bomberthon"/></a>
+```
+    All Bombs away Sir
+      \
+           \      Goodbye Dullsville!
+                __|__  /
+       .'(\      .-.     /)'.
+    +-====(*)===: " :===(o)=====-+
+            \).  '-'  .(/                            
+                 +=
+                 +=
+                 +=           █▄▄ █▀█ █▀▄▀█ █▄▄ █▀▀ █▀█ ▀█▀ █ █ █▀█ █▄ █
+                              █▄█ █▄█ █ ▀ █ █▄█ ██▄ █▀▄  █  █▀█ █▄█ █ ▀█
+                 += 
+                 +=          ###########################################
+                 +=          # Version >>> v1.1 (stable)               #
+                             # Last Update >>> 29th July 2020          #
+                 +=          # Coded by b3!ngD3v (Sinha)               #
+                 +=          # Named by Ritik Gupta                    #
+                 +=          # GitHub >>> https://github.com/b31ngd3v  #
+                 +=          ###########################################
+```
 
 ### Features
 
