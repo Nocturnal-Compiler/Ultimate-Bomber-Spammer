@@ -2,7 +2,7 @@
 ![Licence](https://img.shields.io/github/license/b31ngd3v/bomberthon)
 ![version](https://img.shields.io/static/v1?label=version&message=v1.1-stable&color=brightgreen)
 ![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=blue)
-![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=windows)
+![os](https://img.shields.io/static/v1?label=os%20support&message=windows&color=blue)
 
 
 ```
@@ -79,5 +79,5 @@ Video Link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_
 ## Screenshots
 
 <a><img src="https://raw.githubusercontent.com/b31ngD3v/bomberthon/master/screenshots/Screenshot%20at%202020-07-29%2001-38-23.png" alt="bomberthon"/></a>
-<br>
+
 <a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture.PNG?raw=true" alt="bomberthon"/></a>
