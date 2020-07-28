@@ -1,26 +1,37 @@
 # BOMBERTHON
-Best Bombing Tool with WhatsApp, Instagram, SMS bomber
-
 
 <a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture1.PNG?raw=true" alt="bomberthon"/></a>
+
+### Features
+
+- SMS Bombing
+- WhatsApp Bombing
+- Instagram Bombing
+- Compatible with all Linux & Windows
 
 ## Before Running `bomberthon.py`
 
 * Ensure that you are on Windows Oparating System and you have Chrome Broswer on your PC.
 
 ## Requirements
- 
+
 *  Python 3.x
-* Chrome 
+* Chrome (if you are on windows)
+* Firefox (if you are on linux) (pre-installed)
 * Selenium
 
 
 ## Run
 
-* Run the programme using:
+* Windows :
 
 ```bash
 python bomberthon.py
+```
+* Linux :
+
+```bash
+python3 bomberthon.py
 ```
 
 ## Demo
