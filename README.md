@@ -32,7 +32,7 @@
 - SMS Bombing
 - WhatsApp Bombing
 - Instagram Bombing
-- Compatible with all Linux & Windows
+- Compatible with all Linux & Windows (Kali Linux is not compatible)
 
 ## Before Running `bomberthon.py`
 
