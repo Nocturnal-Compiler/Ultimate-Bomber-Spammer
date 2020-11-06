@@ -242,9 +242,6 @@ def igbombinglinux():
 
     time.sleep(2)
  
-    not_now_btn = browser.find_element_by_class_name('mt3GC')
-    not_now_btn.click()
-
     browser.find_element_by_class_name('dCJp8').click()
 
     time.sleep(1)
