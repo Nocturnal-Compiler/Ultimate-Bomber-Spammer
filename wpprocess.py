@@ -75,15 +75,15 @@ def wpbombingwin():
         print("    |-} please recheck victim's mobile no. ")
     finally:
         pass
-
+ 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
         for i in range(repcount):
-            browser.find_element_by_class_name("DuUXI").send_keys(reptxt + Keys.ENTER)
+            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(reptxt + Keys.ENTER)
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         for words in splitedlyrics:
-            browser.find_element_by_class_name("DuUXI").send_keys(words + Keys.ENTER)
-
+            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(words + Keys.ENTER)
+            
     time.sleep(5)
     print(
     '''    |-} Done !
