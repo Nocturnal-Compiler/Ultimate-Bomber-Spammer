@@ -26,7 +26,7 @@ def wpbombingwin():
 
     try:
         confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "PVMjB")))
+            (By.CLASS_NAME, "_3BDr5")))
     finally:
         pass
 
@@ -63,14 +63,14 @@ def wpbombingwin():
     browser.get(f'https://web.whatsapp.com/send?phone={wp_victim}&text&source&data&app_absent')
 
     try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "PVMjB")))
+        confirm = WebDriverWait(browser, 60).until(EC.presence_of_element_located(
+            (By.CLASS_NAME, "_2O84H")))
     finally:
         pass 
 
     try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_2FVVk._2UL8j")))
+        confirm = WebDriverWait(browser, 80).until(EC.presence_of_element_located(
+            (By.CLASS_NAME, "DuUXI")))
     except:
         print("    |-} please recheck victim's mobile no. ")
     finally:
@@ -78,11 +78,11 @@ def wpbombingwin():
 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
         for i in range(repcount):
-            browser.find_element_by_class_name("_2FVVk._2UL8j").send_keys(reptxt + Keys.ENTER)
+            browser.find_element_by_class_name("DuUXI").send_keys(reptxt + Keys.ENTER)
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         for words in splitedlyrics:
-            browser.find_element_by_class_name("_2FVVk._2UL8j").send_keys(words + Keys.ENTER)
+            browser.find_element_by_class_name("DuUXI").send_keys(words + Keys.ENTER)
 
     time.sleep(5)
     print(
@@ -113,7 +113,7 @@ def wpbombinglinux():
 
     try:
         confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "PVMjB")))
+            (By.CLASS_NAME, "_3BDr5")))
     finally:
         pass
   
@@ -150,14 +150,14 @@ def wpbombinglinux():
     browser.get(f'https://web.whatsapp.com/send?phone={wp_victim}&text&source&data&app_absent')
 
     try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "PVMjB")))
+        confirm = WebDriverWait(browser, 60).until(EC.presence_of_element_located(
+            (By.CLASS_NAME, "_2O84H")))
     finally:
         pass 
 
     try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_2FVVk._2UL8j")))
+        confirm = WebDriverWait(browser, 80).until(EC.presence_of_element_located(
+            (By.CLASS_NAME, "DuUXI")))
     except:
         print("    |-} please recheck victim's mobile no. ")
     finally:
