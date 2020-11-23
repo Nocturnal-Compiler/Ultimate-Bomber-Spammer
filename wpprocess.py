@@ -165,12 +165,12 @@ def wpbombinglinux():
  
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
         for i in range(repcount):
-            browser.find_elements_by_xpath("//div[@class='_3FRCZ copyable-text selectable-text']")[1].send_keys(reptxt + Keys.ENTER)
+            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(reptxt + Keys.ENTER)
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         for words in splitedlyrics:
-            browser.find_elements_by_xpath("//div[@class='_3FRCZ copyable-text selectable-text']")[1].send_keys(words + Keys.ENTER)
-
+            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(words + Keys.ENTER)
+           
     time.sleep(5)
     print(
     '''    |-} Done !
