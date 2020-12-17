@@ -38,7 +38,7 @@ def igbombingwin():
     print('    |-} Logging in...')
 
     options = Options()
-    options.headless = True
+    #options.headless = True
     options.add_argument("--log-level=3")
 
     wcr_dict = os.getcwd() + '//chromedriver.exe'
