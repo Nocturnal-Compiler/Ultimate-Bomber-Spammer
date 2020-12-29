@@ -82,7 +82,7 @@ Video Link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_
 
 <a><img src="https://raw.githubusercontent.com/b31ngD3v/bomberthon/master/screenshots/Screenshot%20at%202020-07-29%2001-38-23.png" alt="bomberthon"/></a>
 
-<a><img src="https://github.com/b31ngD3v/bomberthon/blob/master/screenshots/Capture.PNG?raw=true" alt="bomberthon"/></a>
+<a><img src="https://github.com/el-pr0f3ss0r/bomberthon/blob/master/screenshots/image.png?raw=true" alt="bomberthon"/></a>
 
 Buy Me a Coffee
 ----
