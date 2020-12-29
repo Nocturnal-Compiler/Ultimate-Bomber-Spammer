@@ -15,9 +15,8 @@ def about():
                  += 
                  +=          ###########################################
                  +=          # Version >>> v1.1 (stable)               #
-                             # Last Update >>> 29th July 2020          #
-                 +=          # Coded by b3!ngD3v (Sinha)               #
-                 +=          # Named by Ritik Gupta                    #
+                             # Last Update >>> 29th December 2020      #
+                 +=          # Coded by El Professor                   #
                  +=          # GitHub >>> https://github.com/b31ngd3v  #
                  +=          ###########################################
 ''')
