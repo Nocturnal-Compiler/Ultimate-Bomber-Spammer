@@ -83,8 +83,3 @@ Video Link --> https://www.instagram.com/tv/CCiiO9PACOr/?utm_source=ig_web_copy_
 <a><img src="https://github.com/el-pr0f3ss0r/bomberthon/blob/master/screenshots/image.png?raw=true" alt="bomberthon"/></a>
 
 <a><img src="https://github.com/el-pr0f3ss0r/bomberthon/blob/master/screenshots/Screenshot%20at%202020-12-29%2013-38-45.png?raw=true" alt="bomberthon"/></a>
-
-Buy Me a Coffee
-----
-
-<a href="https://www.buymeacoffee.com/b31ngD3v" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height=60px width=217px></a>
