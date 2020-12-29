@@ -1,5 +1,5 @@
 # BOMBERTHON
-![Licence](https://img.shields.io/github/license/b31ngd3v/bomberthon)
+![Licence](https://img.shields.io/github/license/el-pr0f3ss0r/bomberthon)
 ![version](https://img.shields.io/static/v1?label=version&message=v1.1-stable&color=brightgreen)
 ![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=blue)
 ![os](https://img.shields.io/static/v1?label=os%20support&message=windows&color=blue)
@@ -18,13 +18,12 @@
                  +=           █▄▄ █▀█ █▀▄▀█ █▄▄ █▀▀ █▀█ ▀█▀ █ █ █▀█ █▄ █
                               █▄█ █▄█ █ ▀ █ █▄█ ██▄ █▀▄  █  █▀█ █▄█ █ ▀█
                  += 
-                 +=          ###########################################
-                 +=          # Version >>> v1.1 (stable)               #
-                             # Last Update >>> 29th July 2020          #
-                 +=          # Coded by b3!ngD3v (Sinha)               #
-                 +=          # Named by Ritik Gupta                    #
-                 +=          # GitHub >>> https://github.com/b31ngd3v  #
-                 +=          ###########################################
+                 +=          ##############################################
+                 +=          # Version >>> v1.1 (stable)                  #
+                             # Last Update >>> 29th December 2020         #
+                 +=          # Coded by El Professor                      #
+                 +=          # GitHub >>> https://github.com/el-pr0f3ss0r #
+                 +=          ##############################################
 ```
 
 ### Features
