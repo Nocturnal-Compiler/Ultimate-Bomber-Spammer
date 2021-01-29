@@ -16,7 +16,7 @@ def about():
                  +=          ##############################################
                  +=          # Version >>> v1.1 (stable)                  #
                              # Last Update >>> 29th December 2020         #
-                 +=          # Coded by El Professor                      #
+                 +=          # Coded by Sinha (b31ngd3v                   #
                  +=          # GitHub >>> https://github.com/el-pr0f3ss0r #
                  +=          ##############################################
 ''')
