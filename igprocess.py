@@ -11,47 +11,45 @@ def igbombingwin():
     import os
     import sys
 
-    ig_username = input('    |-$ Your Username > ')
-    ig_password = input('    |-$ Your Password > ')
-    ig_victim = input("    |-$ Victim's Username > ")
-    mode = input('''    |
-    |-PRESS------------------|
+    ig_username = input(chalk.green('    |-> Your Username : '))
+    ig_password = input(chalk.blue('    |-> Your Password : '))
+    ig_victim = input(chalk.red("    |-> Victim's Username : "))
+    mode = input(chalk.green('''    |
+    |-TYPE-------------------|
     | 1] Repetitive Mode     |
     | 2] Script/Lyrical Mode |
     | Facing Problem ?       |
     |    Check out README.MD |
     |------------------------|
-    |-> ''')
+    |-> Enter the mode number : '''))
 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        reptxt = input('    |-$ Word/Sentence that you want to send Multiple Times > ')
-        repcount = int(input('    |-$ How many times ? > '))
+        reptxt = input(chalk.blue('    |-> Word/Sentence that you want to send Multiple Times : '))
+        repcount = int(input(chalk.blue('    |-> How many times ? : ')))
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         lyrics = open("lyrics.txt","r+")  
         splitedlyrics = (lyrics.read().split()) 
 
     else:
-        print('    |-} invalid input !')
+        print(chalk.red('    |-> [-] invalid input !'))
         return
 
-    print('    |-} Logging in...')
+    print(chalk.green('    |-> [+] Logging in...'))
 
     options = Options()
     #options.headless = True
     options.add_argument("--log-level=3")
 
-    wcr_dict = os.getcwd() + '//chromedriver.exe'
+    wcr_dict = os.getcwd() + '\chromedriver.exe'
 
     browser = webdriver.Chrome(executable_path=wcr_dict, chrome_options=options)
 
     os.system('cls')
-    about()
-    menu()
-    print(f'''    |-> 3
-    |-$ Your Username > {ig_username}
-    |-$ Your Password > {ig_password}
-    |-$ Victim's Username > {ig_victim}
+    print(chalk.green(f'''    |-> 3
+    |-> Your Username : {ig_username}
+    |-> Your Password : {ig_password}
+    |-> Victim's Username : {ig_victim}
     |
     |-PRESS------------------|
     | 1] Repetitive Mode     |
@@ -59,14 +57,14 @@ def igbombingwin():
     | Facing Problem ?       |
     |    Check out README.MD |
     |------------------------|
-    |-> {mode}''')
+    |-> {mode}'''))
 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        print(
-f'''    |-$ Word/Sentence that you want to send Multiple Times > {reptxt}
-    |-$ How many times ? > {repcount}''')
+        print(chalk.green(
+f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
+    |-> How many times ? : {repcount}'''))
 
-        print('    |-} Logging in...')
+        print(chalk.green('    |-> [+] Logging in...'))
     
     browser.get('https://www.instagram.com/accounts/login')
     time.sleep(2)
@@ -83,12 +81,12 @@ f'''    |-$ Word/Sentence that you want to send Multiple Times > {reptxt}
             confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
                 (By.CLASS_NAME, "coreSpriteKeyhole")))
         except:
-            print('    |-} Log in Failed !')
+            print(chalk.red('    |-> [-] Log in Failed !'))
             return   
         finally:
             pass
 
-    print('    |-} Logged in Successfully !')
+    print(chalk.green.bold('    |-> [+] Logged in Successfully !'))
 
     browser.get('https://www.instagram.com/direct/new/')
 
@@ -102,6 +100,7 @@ f'''    |-$ Word/Sentence that you want to send Multiple Times > {reptxt}
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
             (By.NAME, "queryBox")))
+        browser.find_element_by_class_name("queryBox").click()
     finally:
         pass
 
@@ -143,9 +142,8 @@ f'''    |-$ Word/Sentence that you want to send Multiple Times > {reptxt}
 
     time.sleep(4)
 
-    print(
-'''    |-} Done !
-    |-----------------------------------------------------------''')
+    print(chalk.green
+('''    |-> [+] Message Sent !'''))
     browser.quit()
 
 def igbombinglinux():
