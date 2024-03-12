@@ -1,9 +1,10 @@
 from about import *
-from igprocess import *
-from smsprocess import *
+from instagram_bomber import *
+from sms_bomber import *
 from callprocess import *
 from checkconnection import *
-from wpprocess import *
+from whatsapp_bomber import *
+from email_bomber import *
 import time
 import platform
 
