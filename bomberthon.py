@@ -20,53 +20,71 @@ else:
 
 s1 = ''
 
-while s1 != '6' or s1 != 'exit' or s1 != 'exit script':
-    about()
-    checkinternet()
-    s1 = input('''
-    |-PRESS---------------|
-    | 1] Call Bomber      |
-    | 2] SMS Bomber       |
-    | 3] Instagram Bomber |
-    | 4] WhatsApp Bomber  |
-    | 5] About            |
-    | 6] Exit Script      |
-    |---------------------|
-    |-> ''')
+Bomber = """
+            ▄████████  ▄█        ▄█             ▄█  ███▄▄▄▄         ▄██████▄  ███▄▄▄▄      ▄████████ 
+           ███    ███ ███       ███            ███  ███▀▀▀██▄      ███    ███ ███▀▀▀██▄   ███    ███ 
+           ███    ███ ███       ███            ███▌ ███   ███      ███    ███ ███   ███   ███    █▀  
+           ███    ███ ███       ███            ███▌ ███   ███      ███    ███ ███   ███  ▄███▄▄▄     
+         ▀███████████ ███       ███            ███▌ ███   ███      ███    ███ ███   ███ ▀▀███▀▀▀     
+           ███    ███ ███       ███            ███  ███   ███      ███    ███ ███   ███   ███    █▄  
+           ███    ███ ███▌    ▄ ███▌    ▄      ███  ███   ███      ███    ███ ███   ███   ███    ███ 
+           ███    █▀  █████▄▄██ █████▄▄██      █▀    ▀█   █▀        ▀██████▀   ▀█   █▀    ██████████ 
+                      ▀         ▀                                                                    
+                ▀█████████▄   ▄██████▄    ▄▄▄▄███▄▄▄▄   ▀█████████▄     ▄████████    ▄████████    
+                  ███    ███ ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███   ███    ███    
+                  ███    ███ ███    ███ ███   ███   ███   ███    ███   ███    █▀    ███    ███    
+                 ▄███▄▄▄██▀  ███    ███ ███   ███   ███  ▄███▄▄▄██▀   ▄███▄▄▄      ▄███▄▄▄▄██▀    
+                ▀▀███▀▀▀██▄  ███    ███ ███   ███   ███ ▀▀███▀▀▀██▄  ▀▀███▀▀▀     ▀▀███▀▀▀▀▀       
+                  ███    ██▄ ███    ███ ███   ███   ███   ███    ██▄   ███    █▄  ▀███████████    
+                  ███    ███ ███    ███ ███   ███   ███   ███    ███   ███    ███   ███    ███    
+                ▄█████████▀   ▀██████▀   ▀█   ███   █▀  ▄█████████▀    ██████████   ███    ███    
+                                                                                    ███    ███    
+"""
 
-    s1 = s1.lower()
+Creds = """
+                                ************************************************  
+                                *   All In One Bomber - By NocturnalCompiler   * 
+                                *            Version 2.0.0 (Stable)            *       
+                                *         Discord : fyodor_dostoyevsky.        *
+                                *          Old Maintainer : b31ngd3v           *
+                                ************************************************                                     
 
-    if s1 == '6' or s1 == 'exit' or s1 == 'exit script':
-        exit()
+"""
 
-    elif s1 == '3' or s1 == 'instagram bomber':
-        if linux:
-            igbombinglinux()
-        elif linux == False:
-            igbombingwin()
-        time.sleep(2)
-    
-    elif s1 == '5' or s1 == 'about':
-        pass
-    
-    elif s1 == '4' or s1 == 'whatsapp bomber':
-        if linux:
-            wpbombinglinux()
-        elif linux == False:
-            wpbombingwin()
-        time.sleep(2)
+Options = """
+    |-TYPE---------------------|
+    | [1] - Email Bomber       |
+    | [2] - SMS Bomber         |
+    | [3] - WhatsApp Bomber    |
+    | [4] - Instagram Bomber   |
+    | [5] - Exit               |
+    |--------------------------|"""
 
-    elif s1 == '2' or s1 == 'sms bomber':
-        if linux:
-            smsbombinglinux()
-        elif linux == False:
-            smsbombingwin()
-        time.sleep(2)
+print(chalk.yellow.bold(Bomber))
+print(chalk.cyanBright(Creds))
+print(chalk.red.bold("                              Please use this tool for educational purpose only.                            "))
+print(chalk.red.bold("                      Github : https://github.com/Nocturnal-Compiler/Ultimate-Bomber-Spammer                  "))
+print('\n')
+print(chalk.green.bold(Options))
+opt = int(input(chalk.blue.bold("    |-> Enter the option number : ")))
 
-    elif s1 == '1' or s1 == 'call bomber':
-        callbombing()
-        time.sleep(2)
+if opt == 1:
+    ebombingwin()
 
+elif opt == 2:
+    if linux:
+        smsbombinglinux()
     else:
-        print("    |-} Sorry I didn't get it !")
-        time.sleep(2)
+        smsbombingwin()
+
+elif opt == 3:
+    if linux:
+        wpbombinglinux()
+    else:
+        wpbombingwin()
+
+elif opt == 4:
+    if linux:
+        igbombinglinux()
+    else:
+        igbombingwin()
