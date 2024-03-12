@@ -68,12 +68,12 @@ sudo chmod +x geckodriver
 * Windows :
 
 ```bash
-python bomberthon.py
+python bomber.py
 ```
 * Linux :
 
 ```bash
-python3 bomberthon.py
+python3 bomber.py
 ```
 
 ## Demo
