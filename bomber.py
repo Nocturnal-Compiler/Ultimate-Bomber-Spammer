@@ -5,6 +5,7 @@ from callprocess import *
 from checkconnection import *
 from whatsapp_bomber import *
 from email_bomber import *
+from simple_chalk import chalk
 import time
 import platform
 
