@@ -32,6 +32,8 @@
 - SMS Bombing
 - WhatsApp Bombing
 - Instagram Bombing
+- Email Bombing
+- Call Bombing (In Development)
 - Compatible with all Linux & Windows (Kali Linux is not compatible)
 
 ## Before Running `bomberthon.py`
