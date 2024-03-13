@@ -1,5 +1,5 @@
 requests==2.22.0
-selenium==4.11.0
+selenium==4.10.0
 simple-chalk==0.1.0
 colorama==0.4.6
 pyfiglet==1.0.2
