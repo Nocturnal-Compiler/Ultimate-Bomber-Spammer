@@ -3,7 +3,7 @@ from instagram_bomber import *
 from sms_bomber import *
 from callprocess import *
 from checkconnection import *
-from whatsapp_bomber import *
+from whatsapp_bomber import wbbomber
 from email_bomber import *
 from simple_chalk import chalk
 import time
@@ -80,10 +80,7 @@ elif opt == 2:
         smsbombingwin()
 
 elif opt == 3:
-    if linux:
-        wpbombinglinux()
-    else:
-        wpbombingwin()
+    wbbomber()
 
 elif opt == 4:
     if linux:
