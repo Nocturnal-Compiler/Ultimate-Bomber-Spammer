@@ -1,3 +1,6 @@
 requests==2.22.0
-selenium==3.141.0
+selenium==4.11.0
 simple-chalk==0.1.0
+colorama==0.4.6
+pyfiglet==1.0.2
+webdriver_manager==4.0.1

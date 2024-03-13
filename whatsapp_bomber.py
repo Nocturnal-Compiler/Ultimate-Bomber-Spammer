@@ -2,6 +2,7 @@ import os
 import pyfiglet
 import webbrowser
 from colorama import Fore
+from simple_chalk import chalk
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
