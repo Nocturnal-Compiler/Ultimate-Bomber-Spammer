@@ -1,186 +1,109 @@
-def wpbombingwin():
-    from selenium import webdriver
-    from selenium.webdriver.common.keys import Keys
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.chrome.options import Options
-    from simple_chalk import chalk
-    import time
-    import os
+import os
+import pyfiglet
+import webbrowser
+from colorama import Fore
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
-    options = Options()
-    options.add_argument("--log-level=3")
-    wcr_dict = os.getcwd() + '\chromedriver.exe'
+driver = None  # Global variable to store the driver object
 
-    browser = webdriver.Chrome(executable_path=wcr_dict, chrome_options=options)
+def main():
+    banner()
+    ans=True
+    bomb()
 
-    browser.get('https://web.whatsapp.com/')
+def setup_chrome():
+    options = webdriver.ChromeOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
 
-    os.system('cls')
-    eascii = """ 
-    $$\      $$\$$\                $$\                                               $$$$$$$\                       $$\                         
-    $$ | $\  $$ $$ |               $$ |                                              $$  __$$\                      $$ |                        
-    $$ |$$$\ $$ $$$$$$$\  $$$$$$\$$$$$$\   $$$$$$$\ $$$$$$\  $$$$$$\  $$$$$$\        $$ |  $$ |$$$$$$\ $$$$$$\$$$$\ $$$$$$$\  $$$$$$\  $$$$$$\  
-    $$ $$ $$\$$ $$  __$$\ \____$$\_$$  _| $$  _____|\____$$\$$  __$$\$$  __$$\       $$$$$$$\ $$  __$$\$$  _$$  _$$\$$  __$$\$$  __$$\$$  __$$\ 
-    $$$$  _$$$$ $$ |  $$ |$$$$$$$ |$$ |   \$$$$$$\  $$$$$$$ $$ /  $$ $$ /  $$ |      $$  __$$\$$ /  $$ $$ / $$ / $$ $$ |  $$ $$$$$$$$ $$ |  \__|
-    $$$  / \$$$ $$ |  $$ $$  __$$ |$$ |$$\ \____$$\$$  __$$ $$ |  $$ $$ |  $$ |      $$ |  $$ $$ |  $$ $$ | $$ | $$ $$ |  $$ $$   ____$$ |      
-    $$  /   \$$ $$ |  $$ \$$$$$$$ |\$$$$  $$$$$$$  \$$$$$$$ $$$$$$$  $$$$$$$  |      $$$$$$$  \$$$$$$  $$ | $$ | $$ $$$$$$$  \$$$$$$$\$$ |      
-    \__/     \__\__|  \__|\_______| \____/\_______/ \_______$$  ____/$$  ____/       \_______/ \______/\__| \__| \__\_______/ \_______\__|      
-                                                            $$ |     $$ |                                                                       
-                                                            $$ |     $$ |                                                                       
-                                                            \__|     \__|                                                                                                                                                                                           
-"""
-    print(chalk.green(eascii))
+    # Set path to the ChromeDriver executable.
+    chromedriver_path = os.path.join(os.getcwd(), 'chromedriver.exe')
+    service = Service(chromedriver_path)
 
-    try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_3BDr5")))
-        browser.find_element_by_class_name("_3BDr5").click()
-    finally:
-        pass
+    global driver  # Use the global driver variable
+    driver = webdriver.Chrome(service=service, options=options)
+    driver.get('https://web.whatsapp.com/')
 
-    browser.set_window_position(-10000,0)
+    return driver  # Return the initialized driver object
 
-    wp_victim = input(chalk.green("[1] ----> Victim's Phone Number (with country code) > "))
-    bad_chars = ['+', ' ', '-'] 
+def setup_firefox():
+    options = webdriver.FirefoxOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
 
-    for i in bad_chars : 
-        wp_victim = wp_victim.replace(i, '') 
+    # Set path to the GeckoDriver executable.
+    geckodriver_path = os.path.join(os.getcwd(), 'geckodriver')
+    service = FirefoxService(geckodriver_path)
 
-    mode = input('''    |
-    |-TYPE-------------------|
-    | 1] Repetitive Mode     |
-    | 2] Script/Lyrical Mode |
-    | Facing Problem ?       |
-    |    Check out README.MD |
-    |------------------------|
-    |-> Enter the mode number : ''')
+    global driver  # Use the global driver variable
+    driver = webdriver.Firefox(service=service, options=options)
+    driver.get('https://web.whatsapp.com/')
 
-    if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        reptxt = input(chalk.blue('    |-> [2] Word/Sentence that you want to send Multiple Times > '))
-        repcount = int(input(chalk.green('    |-> [3] How many times ? : ')))
+    return driver  # Return the initialized driver object
 
-    elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
-        lyrics = open("lyrics.txt","r+")  
-        splitedlyrics = (lyrics.read().split()) 
 
+def clean():
+    # For Windows
+    if os.name == 'nt':
+        _ = os.system('cls')
+    # For macOS and Linux
     else:
-        print(chalk.red('    |-> [-] invalid input !'))
-        return
+        _ = os.system('clear')
 
+def banner():
+    foreground_colors = [Fore.MAGENTA, Fore.WHITE, Fore.MAGENTA, Fore.MAGENTA, Fore.WHITE, Fore.MAGENTA]
 
-    browser.get(f'https://web.whatsapp.com/send?phone={wp_victim}&text&source&data&app_absent')
+    f = pyfiglet.Figlet(font="stop")
+    text = f.renderText('Whatsapp Bomber')
 
-    try:
-        confirm = WebDriverWait(browser, 60).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_2O84H")))
-    finally:
-        pass 
+    lines = text.split('\n')
+    cur_fore = 0
+    for line in lines:
+        foreground_color = foreground_colors[cur_fore]  # Get the foreground color based on the current index
+        cur_fore = (cur_fore + 1) % len(foreground_colors)  # Increment the index and wrap around if it exceeds the list length
+        colored_line = f"{foreground_color}{line}"  # Add the foreground color to the line
+        print(colored_line)
+        sleep(0.05)
 
-    try:
-        confirm = WebDriverWait(browser, 80).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "DuUXI")))
-    except:
-        print(chalk.red("    |-> [-] please recheck victim's mobile no. "))
-    finally:
-        pass
- 
-    if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        for i in range(repcount):
-            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(reptxt + Keys.ENTER)
+    # Reset the colorama settings
+    print(Fore.RESET)
 
-    elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
-        for words in splitedlyrics:
-            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(words + Keys.ENTER)
-            
-    time.sleep(5)
-    print(chalk.green('    |-> [+] Message(s) sent successfully !'))
-    browser.quit()
+def bomb():
+    name = input(chalk.green('Enter the name of user or group: '))
+    msg = input(chalk.green('Enter your message: '))
+    count = int(input(chalk.green('Enter the count: ')))
 
-def wpbombinglinux():
-    from selenium import webdriver
-    from selenium.webdriver.common.keys import Keys
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.firefox.options import Options
-    from about import menu,about
-    import time
-    import os
-    import platform
+    input(chalk.green('Enter any key whenever you\'re ready!'))
 
+    user = driver.find_element(By.XPATH, f'//span[@title="{name}"]')
+    user.click()
 
-    options = Options()
-    options.add_argument("--log-level=3")
-    cr_dict = os.getcwd() + '/geckodriver'
-        
-    browser = webdriver.Firefox(executable_path=cr_dict , options=options)
+    print(chalk.green('Waiting 4 seconds to let WhatsApp load...'))
+    sleep(4)
+    # The classname of message box may vary.
+    msg_box = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]')
 
-    browser.get('https://web.whatsapp.com/')
+    for i in range(count):
+        msg_box.send_keys(msg)
+        # The classname of send button may vary.
+        button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
+        button.click()
 
-    try:
-        confirm = WebDriverWait(browser, 600).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_3BDr5")))
-    finally:
-        pass
-  
-    browser.minimize_window()
+    print(chalk.green('Bombing Complete!!'))
+    sleep(4)
+    main()
 
-    wp_victim = input("    |-$ Victim's Phone Number (with country code) > ")
-    bad_chars = ['+', ' ', '-'] 
+# Choose the appropriate setup function based on the OS
+if os.name == 'nt':
+    driver = setup_chrome()
+else:
+    driver = setup_firefox()
 
-    for i in bad_chars : 
-        wp_victim = wp_victim.replace(i, '') 
-
-    mode = input('''    |
-    |-PRESS------------------|
-    | 1] Repetitive Mode     |
-    | 2] Script/Lyrical Mode |
-    | Facing Problem ?       |
-    |    Check out README.MD |
-    |------------------------|
-    |-> ''')
-
-    if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        reptxt = input('    |-$ Word/Sentence that you want to send Multiple Times > ')
-        repcount = int(input('    |-$ How many times ? > '))
-
-    elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
-        lyrics = open("lyrics.txt","r+")  
-        splitedlyrics = (lyrics.read().split()) 
-
-    else:
-        print('    |-} invalid input !')
-        return
-
-
-    browser.get(f'https://web.whatsapp.com/send?phone={wp_victim}&text&source&data&app_absent')
-
-    try:
-        confirm = WebDriverWait(browser, 60).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "_2O84H")))
-    finally:
-        pass 
-
-    try:
-        confirm = WebDriverWait(browser, 80).until(EC.presence_of_element_located(
-            (By.CLASS_NAME, "DuUXI")))
-    except:
-        print("    |-} please recheck victim's mobile no. ")
-    finally:
-        pass
- 
-    if mode.lower() == '1' or mode.lower() == 'repetitive mode':
-        for i in range(repcount):
-            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(reptxt + Keys.ENTER)
-
-    elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
-        for words in splitedlyrics:
-            browser.find_elements_by_css_selector('.DuUXI div')[2].send_keys(words + Keys.ENTER)
-           
-    time.sleep(5)
-    print(
-    '''    |-} Done !
-    |-----------------------------------------------------------''')
-    browser.quit()
+input(chalk.green('Enter any key after scanning QR code'))
+main()
