@@ -89,12 +89,12 @@ def wbbomber():
         print(chalk.green('Waiting 4 seconds to let WhatsApp load...'))
         sleep(4)
         # The classname of message box may vary.
-        msg_box = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]')
+        msg_box = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p')
     
         for i in range(count):
             msg_box.send_keys(msg)
             # The classname of send button may vary.
-            button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button')
+            button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span')
             button.click()
     
         print(chalk.green('Bombing Complete!!'))
