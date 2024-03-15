@@ -15,6 +15,7 @@ def wbbomber():
     driver = None  # Global variable to store the driver object
     
     def main():
+        clean()
         banner()
         ans=True
         bomb()
