@@ -1,4 +1,4 @@
-requests==2.22.0
+requests==2.28.1
 selenium==4.10.0
 simple-chalk==0.1.0
 colorama==0.4.6
