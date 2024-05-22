@@ -4,6 +4,8 @@ def igbombingwin():
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.chrome.service import Service
+    from selenium.webdriver.firefox.service import Service as FirefoxService
     from selenium.webdriver.chrome.options import Options
     import platform
     from about import menu,about
@@ -44,7 +46,9 @@ def igbombingwin():
 
     wcr_dict = os.getcwd() + '\chromedriver.exe'
 
-    browser = webdriver.Chrome(executable_path=wcr_dict, chrome_options=options)
+    service = Service(wcr_dict)
+
+    browser = webdriver.Chrome(service=service, options=options)
 
     os.system('cls')
     print(chalk.green(f'''    |-> 3
