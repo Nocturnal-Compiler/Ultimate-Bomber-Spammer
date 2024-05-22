@@ -7,6 +7,7 @@ def igbombingwin():
     from selenium.webdriver.chrome.options import Options
     import platform
     from about import menu,about
+    import chalk
     import time
     import os
     import sys
