@@ -73,11 +73,11 @@ f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
     
     browser.get('https://www.instagram.com/accounts/login')
     time.sleep(2)
-    username_bar = browser.find_element_by_name('username')
+    username_bar = browser.find_element(By.NAME, 'username')
     username_bar.send_keys(ig_username)
-    password_bar = browser.find_element_by_name('password')
+    password_bar = browser.find_element(By.NAME, 'password')
     password_bar.send_keys(ig_password + Keys.ENTER)
-    time.sleep(7)
+    confirm = str(input(chalk.blue('    |-> Press Enter after you logged in : ')))
 
     if browser.current_url == 'https://www.instagram.com/':
         pass
