@@ -19,12 +19,12 @@
                  +=           █▄▄ █▀█ █▀▄▀█ █▄▄ █▀▀ █▀█ ▀█▀ █ █ █▀█ █▄ █
                               █▄█ █▄█ █ ▀ █ █▄█ ██▄ █▀▄  █  █▀█ █▄█ █ ▀█
                  += 
-                 +=          ##############################################
-                 +=          # Version >>> v1.1 (stable)                  #
-                             # Last Update >>> 29th December 2020         #
-                 +=          # Coded by Sinha (b31ngd3v)                  #
-                 +=          # GitHub >>> https://github.com/b31ngd3v     #
-                 +=          ##############################################
+                 +=          ########################################################
+                 +=          #               Version >>> v2.0 (beta)                #
+                             #            Last Update >>> 22nd May 2024             #
+                 +=          #        Coded by Vignan (Nocturnal-Compiler)          #
+                 +=          #   GitHub >>> https://github.com/Nocturnal-Compiler   #
+                 +=          ########################################################
 ```
 
 ### Features
