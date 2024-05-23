@@ -98,18 +98,18 @@ f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
     try:
         confirm = WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.CLASS_NAME, "mt3GC")))
-        browser.find_element_by_class_name("mt3GC").click()
+        browser.find_element(By.CLASS_NAME, "mt3GC").click()
     except:
         pass
 
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
             (By.NAME, "queryBox")))
-        browser.find_element_by_class_name("queryBox").click()
+        browser.find_element(By.CLASS_NAME, "queryBox").click()
     finally:
         pass
 
-    browser.find_element_by_name('queryBox').send_keys(ig_victim)
+    browser.find_element(By.NAME, 'queryBox').send_keys(ig_victim)
 
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
