@@ -5,6 +5,7 @@ def smsbombingwin():
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
     from selenium.webdriver.support.ui import Select
     from simple_chalk import chalk
     import time
@@ -55,9 +56,9 @@ def smsbombingwin():
 
     wcr_dict = os.getcwd() + '\chromedriver.exe'
 
-    print(chalk.green("[+] Chrome Driver Path Found = ",wcr_dict))
+    print(chalk.green(f"[+] Chrome Driver Path Found = {wcr_dict}"))
 
-    browser = webdriver.Chrome(executable_path=wcr_dict, chrome_options=options)
+    browser = webdriver.Chrome(service=Service(wcr_dict), options=options)
 
     print("\n\n")
     
@@ -85,7 +86,7 @@ def smsbombingwin():
             pass
 
 
-        select = Select(browser.find_element_by_name('countrycode'))
+        select = Select(browser.find_element(By.NAME, 'countrycode'))
 
         try:
             select.select_by_value(cc)
@@ -95,7 +96,7 @@ def smsbombingwin():
         finally:
             pass
 
-        browser.find_element_by_name('submit').click()
+        browser.find_element(By.NAME, 'submit').click()
         time.sleep(5)
         browser.get('https://mytoolstown.com/smsbomber/#bestsmsbomber')
 
@@ -106,11 +107,11 @@ def smsbombingwin():
             pass
 
 
-    browser.find_element_by_id('mobno').send_keys(int(ph))
+    browser.find_element(By.ID, 'mobno').send_keys(int(ph))
     time.sleep(5)
-    browser.find_element_by_id('count').send_keys(repcount)
+    browser.find_element(By.ID, 'count').send_keys(repcount)
     time.sleep(1)
-    browser.find_element_by_id('count').send_keys(Keys.TAB + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ENTER)
+    browser.find_element(By.ID, 'count').send_keys(Keys.TAB + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ENTER)
 
     while browser.current_url != 'https://mytoolstown.com/smsbomber/success.php':
         time.sleep(5)
@@ -126,6 +127,7 @@ def smsbombinglinux():
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.firefox.options import Options
+    from selenium.webdriver.firefox.service import Service as FirefoxService
     from selenium.webdriver.support.ui import Select
     import platform
     from about import menu,about
@@ -164,7 +166,7 @@ def smsbombinglinux():
 
     cr_dict = os.getcwd() + '/geckodriver'
 
-    browser = webdriver.Firefox(executable_path=cr_dict , options=options)
+    browser = webdriver.Firefox(service=FirefoxService(cr_dict), options=options)
 
     print("    |-$ Attack Under Progress (Don't Close The Terminal) !")
 
@@ -187,7 +189,7 @@ def smsbombinglinux():
             pass
 
 
-        select = Select(browser.find_element_by_name('countrycode'))
+        select = Select(browser.find_element(By.NAME, 'countrycode'))
 
         try:
             select.select_by_value(cc)
@@ -197,7 +199,7 @@ def smsbombinglinux():
         finally:
             pass
 
-        browser.find_element_by_name('submit').click()
+        browser.find_element(By.NAME, 'submit').click()
         time.sleep(5)
         browser.get('https://mytoolstown.com/smsbomber/#bestsmsbomber')
 
@@ -208,11 +210,11 @@ def smsbombinglinux():
             pass
 
 
-    browser.find_element_by_id('mobno').send_keys(int(ph))
+    browser.find_element(By.ID, 'mobno').send_keys(int(ph))
     time.sleep(5)
-    browser.find_element_by_id('count').send_keys(repcount)
+    browser.find_element(By.ID, 'count').send_keys(repcount)
     time.sleep(1)
-    browser.find_element_by_id('count').send_keys(Keys.TAB + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ENTER)
+    browser.find_element(By.ID, 'count').send_keys(Keys.TAB + Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ENTER)
 
     while browser.current_url != 'https://mytoolstown.com/smsbomber/success.php':
         time.sleep(5)

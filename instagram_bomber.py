@@ -119,11 +119,11 @@ f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
 
     time.sleep(2)
 
-    browser.find_element_by_class_name('dCJp8').click()
+    browser.find_element(By.CLASS_NAME, 'dCJp8').click()
 
     time.sleep(1)
 
-    browser.find_element_by_class_name('rIacr').click()
+    browser.find_element(By.CLASS_NAME, 'rIacr').click()
 
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
@@ -131,7 +131,7 @@ f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
     finally:
         pass 
 
-    if ig_victim == browser.find_elements_by_class_name('_7UhW9.vy6Bb.qyrsm.KV-D4.fDxYl')[1].text:
+    if ig_victim == browser.find_elements(By.CLASS_NAME, '_7UhW9.vy6Bb.qyrsm.KV-D4.fDxYl')[1].text:
         pass
     else:
         print('    |-} no such user named ' + ig_victim)
@@ -139,11 +139,11 @@ f'''    |-> Word/Sentence that you want to send Multiple Times : {reptxt}
 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
         for i in range(repcount):
-            browser.find_element_by_xpath("//textarea").send_keys(reptxt + Keys.ENTER)
+            browser.find_element(By.XPATH, "//textarea").send_keys(reptxt + Keys.ENTER)
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         for words in splitedlyrics:
-            browser.find_element_by_xpath("//textarea").send_keys(words + Keys.ENTER)
+            browser.find_element(By.XPATH, "//textarea").send_keys(words + Keys.ENTER)
 
     time.sleep(4)
 
@@ -158,6 +158,7 @@ def igbombinglinux():
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.firefox.options import Options
+    from selenium.webdriver.firefox.service import Service as FirefoxService
     import platform
     from about import menu,about
     import time
@@ -194,15 +195,16 @@ def igbombinglinux():
     options.headless = True
     options.add_argument("--log-level=3")
 
-    cr_dict = os.getcwd() + '/geckodriver'
+    geckodriver_path = os.path.join(os.getcwd(), 'geckodriver')
+    service = FirefoxService(geckodriver_path)
 
-    browser = webdriver.Firefox(executable_path=cr_dict , options=options)
+    browser = webdriver.Firefox(service=service, options=options)
     
     browser.get('https://www.instagram.com/accounts/login')
     time.sleep(2)
-    username_bar = browser.find_element_by_name('username')
+    username_bar = browser.find_element(By.NAME, 'username')
     username_bar.send_keys(ig_username)
-    password_bar = browser.find_element_by_name('password')
+    password_bar = browser.find_element(By.NAME, 'password')
     password_bar.send_keys(ig_password + Keys.ENTER)
     time.sleep(7)
 
@@ -225,7 +227,7 @@ def igbombinglinux():
     try:
         confirm = WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.CLASS_NAME, "mt3GC")))
-        browser.find_element_by_class_name("mt3GC").click()
+        browser.find_element(By.CLASS_NAME, "mt3GC").click()
     except:
         pass
 
@@ -235,7 +237,7 @@ def igbombinglinux():
     finally:
         pass
 
-    browser.find_element_by_name('queryBox').send_keys(ig_victim)
+    browser.find_element(By.NAME, 'queryBox').send_keys(ig_victim)
 
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
@@ -245,11 +247,11 @@ def igbombinglinux():
 
     time.sleep(2)
  
-    browser.find_element_by_class_name('dCJp8').click()
+    browser.find_element(By.CLASS_NAME, 'dCJp8').click()
 
     time.sleep(1)
 
-    browser.find_element_by_class_name('rIacr').click()
+    browser.find_element(By.CLASS_NAME, 'rIacr').click()
 
     try:
         confirm = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
@@ -257,7 +259,7 @@ def igbombinglinux():
     finally:
         pass 
 
-    if ig_victim == browser.find_elements_by_class_name('_7UhW9.vy6Bb.qyrsm.KV-D4.fDxYl')[1].text:
+    if ig_victim == browser.find_elements(By.CLASS_NAME, '_7UhW9.vy6Bb.qyrsm.KV-D4.fDxYl')[1].text:
         pass
     else:
         print('    |-} no such user named ' + ig_victim)
@@ -265,11 +267,11 @@ def igbombinglinux():
 
     if mode.lower() == '1' or mode.lower() == 'repetitive mode':
         for i in range(repcount):
-            browser.find_element_by_xpath("//textarea").send_keys(reptxt + Keys.ENTER)
+            browser.find_element(By.XPATH, "//textarea").send_keys(reptxt + Keys.ENTER)
 
     elif mode.lower() == '2' or mode.lower() == 'script/lyrical mode':
         for words in splitedlyrics:
-            browser.find_element_by_xpath("//textarea").send_keys(words + Keys.ENTER)
+            browser.find_element(By.XPATH, "//textarea").send_keys(words + Keys.ENTER)
 
     time.sleep(4)
 

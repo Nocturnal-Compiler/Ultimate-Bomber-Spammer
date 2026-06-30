@@ -1,13 +1,12 @@
 import requests
 
 def checkinternet():
-    res = False
+    connected = True
     try:
-        requests.get('https://www.google.com')
-        res = False
+        requests.get('https://www.google.com', timeout=5)
     except Exception:
-        res = True
-    if res:
+        connected = False
+    if not connected:
         print("    |-$ It seems that you are not connected to Internet.")
         print('    |-$ bomberthon will stop now...')
         exit()
